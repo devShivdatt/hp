@@ -10,13 +10,19 @@ const Heros = () => {
       });
   }, []);
 
+  let spanStyle = {
+    "display": "flex",
+    "width": "60%",
+    "border": "thin double #32a1ce",
+    "align-content": "center"
+  }
   return (
     <>
       {heros &&
         heros.map((h,i) => {
           return (
-            <div>
-              <span>
+            <div style={spanStyle}>
+              <span >
                 <img src={h.image} alt={i} width={100} height={100}></img>
                 <span>NAME: {h.name}</span>
                 <span>DOB: {h.dateOfBirth}</span>
